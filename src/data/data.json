@@ -1,0 +1,55 @@
+{
+    "Characters": [
+        {   "id":"0",
+            "name": "saitama",
+            "heroname": "calvo con capas",
+            "age": 32,
+            "photo": "https://images.alphacoders.com/656/thumbbig-656720.webp",
+            "city":"ciudadZ"
+           
+        },
+        {   "id":"1",
+            "name": "Genos",
+            "heroname": "Cyborg demonio",
+            "age": 15,
+            "photo": "https://www.xtrafondos.com/wallpapers/genos-one-punch-man-3220.jpg",
+            "city":"ciudadA"
+            
+        },
+        {   "id":"2",
+            "name": "Tatsumaki",
+            "heroname": "Tornado del Terro",
+            "age": 28,
+            "photo": "https://areajugones.sport.es/wp-content/uploads/2020/09/tatsumaki-one-punch-man-1080x609.jpg",
+            "city":"ciudadA"
+            
+        }
+        ,
+        {   "id":"3",
+            "name": "Satoru",
+            "heroname": "Mumen Rider",
+            "age": 23,
+            "photo": "https://p4.wallpaperbetter.com/wallpaper/145/447/723/anime-one-punch-man-mumen-rider-wallpaper-preview.jpg",
+            "city":"ciudadB"
+            
+        }
+        ,
+        {   "id":"4",
+            "name": "Bang",
+            "heroname": "Kazuhiro Yamaji",
+            "age": 81,
+            "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCzBnLEApMZqt_mnVQnuIarLVCpC3k5iGapLpD-dQU59O9eBZnPkwzErtqfj-3oxgqYgo&usqp=CAU",
+            "city":"ciudadZ"
+            
+        }
+        ,
+        {   "id":"5",
+            "name": "Boros",
+            "heroname": "Toshiyuki Morikawa",
+            "age": 50,
+            "photo": "https://laverdadnoticias.com/__export/1607624875329/sites/laverdad/img/2020/12/10/saitama_boros_batalla.jpg_2039590105.jpg",
+            "city":"alienígenas"
+            
+        }
+    ]
+}
