@@ -8,7 +8,7 @@ export default class characterDetail extends React.Component {
       Actual: data.Characters[0],
     };
   }
-  onChangeInput = (event) => {
+  onChangeSelect = (event) => {
     this.setState(() => {
       return {
         Actual: data.Characters.find(
@@ -20,7 +20,7 @@ export default class characterDetail extends React.Component {
   render() {
     return (
       <div >
-        <select onChange={(event) => {this.onChangeInput(event);}}>
+        <select onChange={(event) => {this.onChangeSelect(event);}}>
           {data.Characters.map((element) => (
           <option value={element.id}>
               {element.name + " " + element.heroname}
