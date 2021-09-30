@@ -7,11 +7,13 @@ import Detail1 from "./components/characterDetail/characterDetail1";
 import About from "./components/footer/about";
 import { useEffect } from "react";
 
-function App() {
+export default function App() {
 
   useEffect( ()=> {
     console.log("El componente app se monto")
 },[])
+
+
   return (
     <>
  <Router>
@@ -45,5 +47,5 @@ function App() {
   );
 }
 
-export default App;
+
 

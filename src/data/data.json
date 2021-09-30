@@ -51,5 +51,41 @@
             "city":"alienígenas"
             
         }
+        ,
+        {   "id":"6",
+            "name": "marcos",
+            "heroname": "niño emperador",
+            "age": 10,
+            "photo": "https://static.wikia.nocookie.net/onepunchman/images/c/cd/Chico_Emperador_anime.png/revision/latest/scale-to-width-down/1000?cb=20151210162635&path-prefix=es",
+            "city":"ciudad Y"
+            
+        }
+        ,
+        {   "id":"7",
+            "name": "Kanji",
+            "heroname": "Banken-man",
+            "age": 30,
+            "photo": "https://static.wikia.nocookie.net/onepunchman/images/b/bf/Watchdog_Man_anime.jpg/revision/latest/scale-to-width-down/400?cb=20151204191629&path-prefix=es",
+            "city":"ciudad Q"
+            
+        }
+        ,
+        {   "id":"8",
+            "name": "Fubuki",
+            "heroname": "Ventisca del Infierno",
+            "age": 23,
+            "photo": "https://static.wikia.nocookie.net/onepunchman/images/8/80/Anime_-_Fubuki.jpg/revision/latest/scale-to-width-down/350?cb=20190622195053&path-prefix=es",
+            "city":"ciudad B"
+            
+        }
+        ,
+        {   "id":"9",
+            "name": "Kamikaze",
+            "heroname": "Atomic Samurai",
+            "age": 37,
+            "photo": "https://static.wikia.nocookie.net/onepunchman/images/1/17/Anime_-_AS.png/revision/latest/scale-to-width-down/300?cb=20170916234824&path-prefix=es",
+            "city":"ciudad A"
+            
+        }
     ]
 }

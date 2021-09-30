@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react";
 import data from "../../data/data.json";
 
-<<<<<<< HEAD
+
 
 const CharacterDetail=()=> {
  
@@ -12,23 +12,8 @@ const CharacterDetail=()=> {
   const onChangeInput = (event) => {
  setState(data.Characters.find(
   (element) => element.id === event.target.value))
-=======
-export default class characterDetail extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      Actual: data.Characters[0],
-    };
-  }
-  onChangeSelect = (event) => {
-    this.setState(() => {
-      return {
-        Actual: data.Characters.find(
-          (element) => element.id == event.target.value
-        ),
-      };
-    });
->>>>>>> c06abf88ff57ffede3fea88910b7456a56490555
+
+
   };
   useEffect( ()=> {
     console.log("El personaje se modifico")
@@ -36,16 +21,9 @@ export default class characterDetail extends React.Component {
  
     return (
       <div >
-<<<<<<< HEAD
-       
-                    
-                   
-                    
-               
-        <select onChange={(event) => {onChangeInput(event);}}>
-=======
+
         <select onChange={(event) => {this.onChangeSelect(event);}}>
->>>>>>> c06abf88ff57ffede3fea88910b7456a56490555
+
           {data.Characters.map((element) => (
           <option value={element.id}>
               {element.name + " " + element.heroname}
@@ -66,10 +44,4 @@ export default class characterDetail extends React.Component {
       </div>
     );
   }
-<<<<<<< HEAD
-
-
 export default CharacterDetail;
-=======
-}
->>>>>>> c06abf88ff57ffede3fea88910b7456a56490555
