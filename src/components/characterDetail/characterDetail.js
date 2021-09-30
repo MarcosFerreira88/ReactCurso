@@ -1,26 +1,29 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import data from "../../data/data.json";
 
-export default class characterDetail extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      Actual: data.Characters[0],
-    };
-  }
-  onChangeInput = (event) => {
-    this.setState(() => {
-      return {
-        Actual: data.Characters.find(
-          (element) => element.id == event.target.value
-        ),
-      };
-    });
+
+const CharacterDetail=()=> {
+ 
+  const[actual,setState]=useState(data.Characters[0]);
+
+ 
+
+  const onChangeInput = (event) => {
+ setState(data.Characters.find(
+  (element) => element.id === event.target.value))
   };
-  render() {
+  useEffect( ()=> {
+    console.log("El personaje se modifico")
+},[onChangeInput])
+ 
     return (
       <div >
-        <select onChange={(event) => {this.onChangeInput(event);}}>
+       
+                    
+                   
+                    
+               
+        <select onChange={(event) => {onChangeInput(event);}}>
           {data.Characters.map((element) => (
           <option value={element.id}>
               {element.name + " " + element.heroname}
@@ -30,15 +33,17 @@ export default class characterDetail extends React.Component {
         <br/>
         <div>
           <div>
-            <img src={this.state.Actual.photo}></img>
+            <img src={actual.photo} width="200" alt="imagen"></img>
           </div>
           <h3> Detalles del heroe</h3>
-          <p> nombre: {this.state.Actual.name}</p>
-          <p> nombre de heroe: {this.state.Actual.heroname}</p>
-          <p> Edad: {this.state.Actual.age}</p>
-          <p> Ciudad: {this.state.Actual.city}</p>         
+          <p> nombre: {actual.name}</p>
+          <p> nombre de heroe: {actual.heroname}</p>
+          <p> Edad: {actual.age}</p>
+          <p> Ciudad: {actual.city}</p>         
         </div>
       </div>
     );
   }
-}
+
+
+export default CharacterDetail;

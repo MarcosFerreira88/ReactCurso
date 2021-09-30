@@ -1,24 +1,19 @@
 import React from "react";
+import {NavLink} from 'react-router-dom';
 export default class Nav extends React.Component {
+  // constructor(){
+  //   super();
+  // }
 
   render() {
     return (
-      <header >
-        <nav>
-          
-          <ul>
-            <li>
-              <a href="#">InfoSquad</a>
-            </li>
-            <li>
-              <a href="#">Character Detail</a>
-            </li>
-            <li>
-              <a href="#">About</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <nav>
+            
+            <p> <NavLink exact to="/" activeClassName="activo"> ONE PUNCH </NavLink></p>
+            <p> <NavLink exact to="/characterDetail" activeClassName="activo"> CHARACTERDETAIL </NavLink></p>
+            <p> <NavLink exact to="/about" activeClassName="activo" > ACERCA </NavLink></p>            
+
+      </nav>
     );
   }
 }
