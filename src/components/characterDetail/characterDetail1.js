@@ -19,17 +19,17 @@ export default function CharacterDetail1(){
 
                 <>
 
-                <div>
-            <img src={actual.photo} width="200" alt="imagen"></img>
-          </div>
-          <h3> Detalles del heroe</h3>
-          <p> nombre: {actual.name}</p>
-          <p> nombre de heroe: {actual.heroname}</p>
-          <p> Edad: {actual.age}</p>
-          <p> Ciudad: {actual.city}</p>  
+                                <div>
+                                        <img src={actual.photo} width="200" alt="imagen"></img>
+                                </div>
+                                <h3> Detalles del heroe</h3>
+                                <p> nombre: {actual.name}</p>
+                                <p> nombre de heroe: {actual.heroname}</p>
+                                <p> Edad: {actual.age}</p>
+                                <p> Ciudad: {actual.city}</p>  
                     
                     
-                    <button onClick={redireccionamiento}> REDIRECCIONAR AL HOME</button>
+                                <button onClick={redireccionamiento}> REDIRECCIONAR AL HOME</button>
                 </>
         )
 

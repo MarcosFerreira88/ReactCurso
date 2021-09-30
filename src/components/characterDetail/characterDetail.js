@@ -9,7 +9,7 @@ const CharacterDetail=()=> {
 
  
 
-  const onChangeInput = (event) => {
+  const onChangeSelect = (event) => {
  setState(data.Characters.find(
   (element) => element.id === event.target.value))
 
@@ -17,12 +17,12 @@ const CharacterDetail=()=> {
   };
   useEffect( ()=> {
     console.log("El personaje se modifico")
-},[onChangeInput])
+},[onChangeSelect])
  
     return (
       <div >
 
-        <select onChange={(event) => {this.onChangeSelect(event);}}>
+        <select onChange={(event) => {onChangeSelect(event);}}>
 
           {data.Characters.map((element) => (
           <option value={element.id}>
