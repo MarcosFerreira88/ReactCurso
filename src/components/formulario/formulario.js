@@ -37,7 +37,7 @@ const Formulario =(props)=> {
 
     function onSubmitForm(e){
             e.preventDefault();
-            alert(`el usuario es ${state.email} y las password es ${state.asunto}`)
+            alert(`el correo es ${state.email} y el asunto es ${state.asunto}`)
     }
 
     function onHandleChange(e){
@@ -75,7 +75,7 @@ const Formulario =(props)=> {
                         value={state.email}
                         onChange={(e) => onHandleChange(e)}
                     /> 
-                    {fails.email ? <p style={{color: 'red'}}> {fails.email}</p> : <p>Todo ok </p>}
+                    {fails.email ? <p style={{color: 'red'}}> {fails.email}</p> : <p></p>}
                 </div> 
                 <div>
                     <label> Asunto </label>
