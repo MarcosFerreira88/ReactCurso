@@ -20,6 +20,7 @@ const CharacterDetail=()=> {
 },[onChangeSelect])
  
     return (
+      <center>
       <div className="container-sm mt-3">
 
         <Form.Select class="custom-select"  style={{ width: '50rem' }}  onChange={(event) => {onChangeSelect(event);}}>
@@ -46,6 +47,7 @@ const CharacterDetail=()=> {
         </Cards.Footer>
       </Cards>
        </div>
+       </center>
     );
   }
 export default CharacterDetail;
