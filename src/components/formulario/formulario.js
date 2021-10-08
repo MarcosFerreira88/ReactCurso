@@ -60,11 +60,11 @@ const Formulario =(props)=> {
     
         <Row>
             <Col></Col>
-            <Col xs={6}>
+            <Col xs={8}>
         <div class="container mt-3 ">
             <p class="text-center text-uppercase text-light">Hola mi nombre es Marcos Ferreira y soy desarrollador backend</p>
             <p class="text-center text-italic text-uppercase text-light"> y tengo mucha experiencia en desarrollo con php y c# </p>
-        <div class="card card-container" >
+      
             <h1 className="text-center">Formulario de contacto</h1>
              <form onSubmit={(e) => onSubmitForm(e)} >
                  <div>
@@ -77,7 +77,13 @@ const Formulario =(props)=> {
                         value={state.email}
                         onChange={(e) => onHandleChange(e)}
                     /> 
-                    {fails.email ? <p style={{color: 'red'}}> {fails.email}</p> : <p></p>}
+                       {fails.email ?
+                    <div class="alert alert-danger" role="alert">
+                  <p style={{color: 'red'}}> {fails.email}</p> 
+                    </div>
+                    : <p></p>
+                    }
+                    
                 </div> 
                 <div>
                     <label class="col-sm-2 col-form-label"> Asunto </label>
@@ -89,28 +95,38 @@ const Formulario =(props)=> {
                         value={state.asunto}
                         onChange={(e) => onHandleChange(e)}
                     /> 
-                    {fails.asunto && <p style={{color: 'red'}}> {fails.asunto} </p>}
+                    {fails.asunto && 
+                    <div class="alert alert-danger" role="alert">
+                    <p style={{color: 'red'}}> {fails.asunto} </p>
+                    </div>
+                    }
                 </div> 
                 <div>
-                    <label class="col-sm-2 col-form-label"> Mensaje </label>
+                    <label class="col-sm-2 col-form-label mt-3"> Mensaje </label>
                     <textarea
                         type="text"
-                        class="form-control p-3"
+                        class="form-control p-3 mb-3"
                         name='mensaje'
                         placeholder="maximo de 256 palabras"
                         value={state.mensaje}
                         onChange={(e) => onHandleChange(e)}
                     /> 
-                    {fails.mensaje && <p style={{color: 'red'}}> {fails.mensaje} </p>}
+                    {fails.mensaje && 
+                    <div class="alert alert-danger" role="alert">
+                    <p style={{color: 'red'}}> {fails.mensaje} </p>
+                    </div>
+                    }
                 </div>
                 <div>
-                    <Button   disabled={ fails.email || fails.asunto|| fails.mensaje ? true : false  }>
+                    <center>
+                    <Button  type="submit" className="btn btn-primary btn-lg" disabled={ fails.email || fails.asunto|| fails.mensaje ? true : false  }>
                     Enviar
                     </Button>
+                    </center>
                 </div>
             </form>          
                   
-                </div>
+              
                 </div>
                 </Col>
                 <Col></Col>
