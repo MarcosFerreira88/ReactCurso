@@ -7,12 +7,13 @@ export default class Nav extends React.Component {
 
   render() {
     return (
-  <nav class="navbar navbar-expand-lg navbar-light bg-warning position-static">
-  
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning ">
+  <a class="navbar-brand" href="#">VIRUSCCOL</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    
     <ul class="navbar-nav">
       <li class="nav-item active">
         <Link class="nav-link" exact to="/" > ONE PUNCH </Link>
@@ -23,6 +24,7 @@ export default class Nav extends React.Component {
       <li class="nav-item">
       <Link class="nav-link" exact to="/about" > ACERCA </Link>
      </li>
+     
     </ul>
   </div>
 </nav>

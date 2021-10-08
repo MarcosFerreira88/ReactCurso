@@ -68,7 +68,7 @@ const Formulario =(props)=> {
             <h1 className="text-center">Formulario de contacto</h1>
              <form onSubmit={(e) => onSubmitForm(e)} >
                  <div>
-                    <label class="col-sm-2 col-form-label"> Email </label>
+                    <label class="col-sm-2 col-form-label text-light"> Email </label>
                     <input
                         type="text"
                         class="form-control p-3"
@@ -86,7 +86,7 @@ const Formulario =(props)=> {
                     
                 </div> 
                 <div>
-                    <label class="col-sm-2 col-form-label"> Asunto </label>
+                    <label class="col-sm-2 col-form-label text-light"> Asunto </label>
                     <input
                         type="text"
                         class="form-control"
@@ -102,7 +102,7 @@ const Formulario =(props)=> {
                     }
                 </div> 
                 <div>
-                    <label class="col-sm-2 col-form-label mt-3"> Mensaje </label>
+                    <label class="col-sm-2 col-form-label mt-3 text-light"> Mensaje </label>
                     <textarea
                         type="text"
                         class="form-control p-3 mb-3"
