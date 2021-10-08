@@ -1,21 +1,26 @@
 import React from "react";
 import {NavLink} from 'react-router-dom';
 
+import './card.css'
+
+
+
 const Card =(props)=> {
 
     return (
-      <div >
-        <h3>Character</h3>
-        <div>
-          <img src={props.url} width="300" alt="imagen"></img>
-        </div>
-        <p>
-        <NavLink to={`/CharacterDetail1/${props.id}`}> {props.name}</NavLink>
-        </p>           
-            
-        
-        
-      </div>
+
+         
+                  <div className="cartas">
+                      <h3>Personajes</h3>
+                      <div>
+                      <img src={props.url} width="300" height="250" alt="imagen"></img>
+                      </div>
+                    <div className="nombre">Nombre:  <NavLink to={`/CharacterDetail1/${props.id}`}> {props.name}</NavLink>
+                      </div>         
+                      
+                  </div>         
+           
+           
     );
   
 }

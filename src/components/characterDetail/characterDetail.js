@@ -1,13 +1,13 @@
 import React,{useState,useEffect} from "react";
 import data from "../../data/data.json";
+import {Form} from 'react-bootstrap'
+import Cards  from "react-bootstrap/Card";
 
 
 
 const CharacterDetail=()=> {
  
   const[actual,setState]=useState(data.Characters[0]);
-
- 
 
   const onChangeSelect = (event) => {
  setState(data.Characters.find(
@@ -20,28 +20,32 @@ const CharacterDetail=()=> {
 },[onChangeSelect])
  
     return (
-      <div >
+      <div className="container-sm mt-3">
 
-        <select onChange={(event) => {onChangeSelect(event);}}>
+        <Form.Select class="custom-select"  style={{ width: '50rem' }}  onChange={(event) => {onChangeSelect(event);}}>
 
           {data.Characters.map((element) => (
           <option value={element.id}>
               {element.name + " " + element.heroname}
           </option>
           ))}
-        </select>
-        <br/>
-        <div>
-          <div>
-            <img src={actual.photo} width="200" alt="imagen"></img>
-          </div>
-          <h3> Detalles del heroe</h3>
-          <p> nombre: {actual.name}</p>
-          <p> nombre de heroe: {actual.heroname}</p>
-          <p> Edad: {actual.age}</p>
-          <p> Ciudad: {actual.city}</p>         
-        </div>
-      </div>
+        </Form.Select>
+        <Cards style={{ width: '50rem' }} className="mt-3 mb-3">
+        <Cards.Img variant="top" rounded src={actual.photo} max-width="100%" />
+        <Cards.Body>
+          <Cards.Title>{actual.name}</Cards.Title>
+          <Cards.Text>
+          Edad: {actual.age}
+          <br/>
+          Ciudad: {actual.city}
+
+          </Cards.Text>
+        </Cards.Body>
+        <Cards.Footer>
+          <small className="text-muted">nombre de heroe: {actual.heroname}</small>
+        </Cards.Footer>
+      </Cards>
+       </div>
     );
   }
 export default CharacterDetail;

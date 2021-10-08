@@ -1,0 +1,14 @@
+.cartas {
+    max-width: 400px;
+    max-height: 500px;
+    margin: 15px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+ 
+    text-align: center;
+    background-color: rgb(151, 8, 8);
+    color: white;
+  }
+
+ 
+
+ 

@@ -3,6 +3,8 @@ import Home from "./components/home/home";
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import Detail from "./components/characterDetail/characterDetail";
 import Detail1 from "./components/characterDetail/characterDetail1";
+import Formulario from './components/formulario/formulario'
+import './App.css'
 
 import About from "./components/footer/about";
 import { useEffect } from "react";
@@ -15,7 +17,7 @@ export default function App() {
 
 
   return (
-    <>
+    <div className="App">
  <Router>
     <Nav/>
           
@@ -34,7 +36,7 @@ export default function App() {
           </Route>
 
           <Route path="/about">
-           <About/>
+           <Formulario/>
           </Route>
           
           <Route>
@@ -42,8 +44,9 @@ export default function App() {
           </Route>
 
     </Switch>
+    <About/>
     </Router>
-    </>
+    </div>
   );
 }
 
