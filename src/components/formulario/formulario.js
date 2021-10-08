@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import {Form,Col, Container,Button} from 'react-bootstrap'
+import {Form,Row,Col, Container,Button} from 'react-bootstrap'
 
 export function validacion(input){
     let errors = {}
@@ -30,8 +30,8 @@ const Formulario =(props)=> {
 
     const [fails, setFails] = useState({
             email: 'Email is Required',
-            asunto: "Asunto is required",
-            mensaje:"Mensaje is required"
+            asunto: "Asunto is Required",
+            mensaje:"Mensaje is Required"
     })
   
 
@@ -58,18 +58,20 @@ const Formulario =(props)=> {
     return (
 
     
-        <>
-        <div class="container mt-3">
+        <Row>
+            <Col></Col>
+            <Col xs={6}>
+        <div class="container mt-3 ">
             <p class="text-center text-uppercase text-light">Hola mi nombre es Marcos Ferreira y soy desarrollador backend</p>
             <p class="text-center text-italic text-uppercase text-light"> y tengo mucha experiencia en desarrollo con php y c# </p>
-        <div class="card card-container">
+        <div class="card card-container" >
             <h1 className="text-center">Formulario de contacto</h1>
-             <form onSubmit={(e) => onSubmitForm(e)} className="background=blue">
+             <form onSubmit={(e) => onSubmitForm(e)} >
                  <div>
-                    <label> Email </label>
+                    <label class="col-sm-2 col-form-label"> Email </label>
                     <input
                         type="text"
-                        class="form-control"
+                        class="form-control p-3"
                         name='email'
                         placeholder="Email"
                         value={state.email}
@@ -78,22 +80,22 @@ const Formulario =(props)=> {
                     {fails.email ? <p style={{color: 'red'}}> {fails.email}</p> : <p></p>}
                 </div> 
                 <div>
-                    <label> Asunto </label>
+                    <label class="col-sm-2 col-form-label"> Asunto </label>
                     <input
                         type="text"
                         class="form-control"
                         name='asunto'
-                        placeholder="minimo 1 numero y 1 letra"
+                        placeholder="minimo 10 caracteres"
                         value={state.asunto}
                         onChange={(e) => onHandleChange(e)}
                     /> 
                     {fails.asunto && <p style={{color: 'red'}}> {fails.asunto} </p>}
                 </div> 
                 <div>
-                    <label> Mensaje </label>
+                    <label class="col-sm-2 col-form-label"> Mensaje </label>
                     <textarea
                         type="text"
-                        class="form-control"
+                        class="form-control p-3"
                         name='mensaje'
                         placeholder="maximo de 256 palabras"
                         value={state.mensaje}
@@ -102,7 +104,7 @@ const Formulario =(props)=> {
                     {fails.mensaje && <p style={{color: 'red'}}> {fails.mensaje} </p>}
                 </div>
                 <div>
-                    <Button type="submit" disabled={ fails.email || fails.asunto|| fails.mensaje ? true : false  }>
+                    <Button   disabled={ fails.email || fails.asunto|| fails.mensaje ? true : false  }>
                     Enviar
                     </Button>
                 </div>
@@ -110,7 +112,9 @@ const Formulario =(props)=> {
                   
                 </div>
                 </div>
-        </>
+                </Col>
+                <Col></Col>
+        </Row>
         
         
       
