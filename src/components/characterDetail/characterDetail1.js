@@ -19,7 +19,7 @@ export default function CharacterDetail1(){
 
                 <center>
                 <Card style={{ width: '40rem' }} className="text-center mt-3">
-                        <Card.Img variant="top" src={actual.photo} width="200"/>
+                        <Card.Img variant="top" src={actual.photo} width="200" height="500px"/>
                         <Card.Body>
                         <Card.Title>{actual.name}</Card.Title>
                         <Card.Text>
