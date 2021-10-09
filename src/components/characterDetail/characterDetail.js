@@ -32,7 +32,7 @@ const CharacterDetail=()=> {
           ))}
         </Form.Select>
         <Cards style={{ maxWidth: '800px' }} className="mt-3 mb-3">
-        <Cards.Img variant="top" rounded src={actual.photo} max-width="200px" height="400px" />
+        <Cards.Img variant="top" rounded src={actual.photo} max-width="200px" height="600px" />
         <Cards.Body>
           <Cards.Title>{actual.name}</Cards.Title>
           <Cards.Text>

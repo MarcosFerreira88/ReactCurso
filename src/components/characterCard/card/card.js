@@ -12,7 +12,7 @@ const Card =(props)=> {
          
                   <div className="cartas">
                       <h3>Personajes</h3>
-                      <div className="card" style={{maxWidth:"200px"}}>
+                      <div className="card" >
                       <img src={props.url} width="300" height="250" alt="imagen"></img>
                       </div>
                     <div className="nombre">Nombre:  <NavLink to={`/CharacterDetail1/${props.id}`}> {props.name}</NavLink>
